@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .f {
+            position: relative;
+            width: 100%;
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url("https://wallpaperaccess.com/full/41078.jpg") no-repeat center center/cover;
+        }
+
+        .f::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 1;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        .d {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            animation: rotating 5s linear infinite;
+        }
+
+        .d1 { background-color: rgb(81, 140, 180); border-radius: 40%; }
+        .d2 { background-color: rgb(233, 172, 233); border-radius: 10px; }
+        .d3 { background-color: rgb(150, 63, 255); border-radius: 40%; }
+        .d4 { background-color: rgb(160, 255, 255); border-radius: 10px; }
+        .d5 { background-color: rgb(81, 140, 180); border-radius: 40%; }
+        .d6 { background-color: rgb(233, 172, 233); border-radius: 10px; }
+        .d7 { background-color: rgb(150, 63, 255); border-radius: 40%; }
+        .d8 { background-color: rgb(160, 255, 255); border-radius: 10px; }
+        .d9 { background-color: rgb(81, 140, 180); border-radius: 40%; }
+        
+        @keyframes rotating {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .container {
+            background-color: rgba(69, 169, 169, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            z-index: 2;
+        }
+
+        .in {
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(224, 255, 255);
+            margin-top: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+            border: none;
+            background-color: rgb(222, 222, 222);
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-wrap: wrap;
+            }
+            .d {
+                width: 60px;
+                height: 60px;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .d {
+                width: 50px;
+                height: 50px;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+        .d {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* Ensure positioning works */
+        }
+        
+        .d img {
+            position: absolute;
+            width: 70px; /* Adjust the size as needed */
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="f">
+        <div class="row">
+            <div class="d d1 rotating">
+                <img src="http://clipart-library.com/image_gallery2/Chibi-PNG-Pic.png" alt="icon">
+            </div>
+            <div class="d d2">
+                <img src="https://i.pinimg.com/originals/de/10/0e/de100ef5f6cb9e1123e9d837e453d25d.png" alt="icon">
+            </div>
+            <div class="d d3">
+                <img src="https://i.pinimg.com/originals/20/8a/36/208a365f902609fe70ba458542c6227c.png" alt="icon">
+            </div>
+            <div class="d d4">
+                <img src="https://png.pngtree.com/png-clipart/20230407/original/pngtree-cute-school-anime-chibi-character-png-image_9035249.png" alt="icon">
+            </div>
+            <div class="d d5">
+                <img src="https://preview.redd.it/lxterp3susn91.png?width=964&format=png&auto=webp&s=a08a2e04ce19b08f91828f9399e70bba9e783c3a" alt="icon">
+            </div>
+            <div class="d d6">
+                <img src="https://i.pinimg.com/originals/ff/aa/b0/ffaab0ddc078334fafb9bd534e159c79.png" alt="icon">
+            </div>
+            <div class="d d7">
+                <img src="https://i.pinimg.com/originals/02/07/2a/02072a87d479f3b0da5ae73160107b18.png" alt="icon">
+            </div>
+            <div class="d d8">
+                <img src="https://i.pinimg.com/originals/80/39/e9/8039e99f295abe62828a76bd5c4fa04b.png" alt="icon"></div>
+            <div class="d d9">
+                <img src="https://i.pinimg.com/originals/0a/b0/84/0ab084c73cb730e4ac0eff47ad85c721.png" alt="icon">
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>SIGN UP</h1>
+            <input type="text" placeholder="Enter Username" class="in">
+            <input type="text" placeholder="Enter Email" class="in">            
+            <input type="password" placeholder="Enter Password" class="in">
+            <input type="button" value="Submit" class="btn">
+        </div>
+
+        <div class="footer">
+            <h4><a href="index.html" style="text-decoration: none;">🡨 Back</a> &emsp;&emsp;&emsp; Already have an account? <a href="Csignin.html">SignIn</a></h4>
+        </div>
+    </div>
+</body>
+</html>
